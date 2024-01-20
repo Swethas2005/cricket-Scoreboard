@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("https://images.indianexpress.com/2019/10/Melbourne-Cricket-Ground-Victoria-1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    color: white; 
+  }
+
+  #scoreboard {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7); 
+  }
+
+  h1{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    font-size: 70px;
+    font-weight: bold;
+  }
+  
+  p{
+    font-size: 45px;
+    font-weight: bold;
+    padding: 10px;
+    color: black;
+    
+  }
+
+  #score-holder{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+
+  button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: medium;
+    margin-left: 40px;
+    color: #43ff;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+  }
+
+  #btn-holder{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn-holder{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button:hover{
+    transform: scale(1.1);
+    transition:  0.9s;
+  }
+
+  .btns{
+    width: 225px;
+    height: 48px;
+    margin-left: 40px;
+  }

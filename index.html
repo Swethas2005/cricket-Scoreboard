@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boilerplate Code</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Code goes here
+    let { useState } = React;
+
+    let CricketScoreboard = () => {
+      let [runs, setRuns] = useState(0);
+      let [wickets, setWickets] = useState(0);
+
+      let increaseRuns = (score) => {
+        setRuns(runs + score);
+      };
+
+      let updateWicket = () => {
+        if (wickets < 10) {
+          setWickets(wickets + 1);
+        }
+      }
+
+      let resetRuns = () => {
+        setRuns(0);
+      }
+
+      let resetWickets = () => {
+        setWickets(0);
+      }
+
+      return (
+        <div id="CricketScoreboard">
+          <h1>
+            CricketScoreBoard
+          </h1>
+          <div id="score-holder">
+            <p>Runs : {runs}</p>
+            <p>Wickets : {wickets}</p>
+          </div>
+          <div id="btn-holder">
+          <button onClick={() => increaseRuns(4)}>Increase runs by 4</button>
+          <button onClick={() => increaseRuns(8)}>Increase runs by 8</button>
+          <button onClick={() => increaseRuns(3)}>Increase runs by 3</button>
+         </div>
+          <div class="btn-holder">
+          <button class="btns" onClick={updateWicket}>Update Wicket</button>
+          <button class="btns" onClick={resetRuns}>Reset Runs</button>
+          <button class="btns" onClick={resetWickets}>Reset Wickets</button> 
+          </div> 
+        </div>
+      );
+    }
+
+    let reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+    reactRoot.render(<CricketScoreboard />);
+  </script>
+</html>
+
+
+
